@@ -1,0 +1,40 @@
+#main-div {
+    border: 1px solid black;
+    background: #483B3A;
+    color: white;
+    font-family: 'VT323', monospace;
+}
+
+#header {
+    border-bottom: 4px solid #222222;
+    font-size: 32pt;
+    white-space: nowrap;
+    overflow: hidden;
+}
+
+#game-div {
+    border: 3px solid #222222;
+    width: 95%;
+    height: 375px;
+    background-image: url("../images/dungeon.svg");
+    background-size: 240px 375px;
+    background-repeat: repeat-x;
+}
+
+.character {
+    height: 50%;
+    max-width: 125px;
+    max-height: 196px;
+
+    position: relative;
+    top: 30%;
+}
+
+#log-div {
+    border: 2px solid #222222;
+    background: #D3BFA9;
+    color: #222222;
+    font-size: 16pt;
+    margin-right: 50%;
+    height: 10rem;
+}
