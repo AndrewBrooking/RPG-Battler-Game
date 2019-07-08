@@ -21,13 +21,33 @@
     background-repeat: repeat-x;
 }
 
-.character {
-    height: 50%;
-    max-width: 125px;
-    max-height: 196px;
+#elf {
+    background-image: url("../images/elf.png");
+}
 
+#knight {
+    background-image: url("../images/knight.png");
+}
+
+#orc {
+    background-image: url("../images/orc.png");
+}
+
+#skeleton {
+    background-image: url("../images/skeleton.png");
+}
+
+#wizard {
+    background-image: url("../images/wizard.png");
+}
+
+.character {
+    height: 196px;
+    background-repeat: no-repeat;
+    background-position-x: 50%;
     position: relative;
     top: 30%;
+    animation: sprite 1s steps(2) infinite;
 }
 
 #log-div {
@@ -37,4 +57,9 @@
     font-size: 16pt;
     margin-right: 50%;
     height: 10rem;
+}
+
+@keyframes sprite {
+    from { background-position-y: 0px; }
+    to { background-position-y: -392px; }
 }
