@@ -7,14 +7,10 @@
 
 #header {
     border-bottom: 4px solid #222222;
-    font-size: 32pt;
-    white-space: nowrap;
-    overflow: hidden;
 }
 
 #game-div {
     border: 3px solid #222222;
-    width: 95%;
     height: 375px;
     background-image: url("../images/dungeon.svg");
     background-size: 240px 375px;
@@ -43,11 +39,42 @@
 
 .character {
     height: 196px;
+    max-width: 200px;
     background-repeat: no-repeat;
-    background-position-x: 50%;
+    background-position: center;
     position: relative;
-    top: 30%;
+    top: 40%;
     animation: sprite 1s steps(2) infinite;
+}
+
+.player {
+    border: 3px solid darkgreen;
+}
+
+.enemy {
+    transform: scaleX(-1);
+}
+
+.btn {
+    color: white;
+    font-size: 32pt;
+    background-image: url("../images/button.svg");
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position-x: center;
+    width: 100%;
+    height: 40%;
+    position: relative;
+    top: 55%;
+}
+
+.btn:hover {
+    color: lightgray;
+}
+
+#info {
+    font-size: 28pt;
+    border-bottom: 4px solid #222222;
 }
 
 #log-div {
@@ -60,6 +87,11 @@
 }
 
 @keyframes sprite {
-    from { background-position-y: 0px; }
-    to { background-position-y: -392px; }
+    from {
+        background-position-y: 0px;
+    }
+
+    to {
+        background-position-y: -392px;
+    }
 }

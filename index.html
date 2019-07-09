@@ -2,66 +2,67 @@
 
 <html lang="en">
 
-    <!-- Credit to 0x72 for image assets -->
-    <!-- https://0x72.itch.io/dungeontileset-ii -->
+<!-- Credit to 0x72 for image assets -->
+<!-- https://0x72.itch.io/dungeontileset-ii -->
 
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-        <title>Dungeon RPG Battles</title>
+    <title>Dungeon RPG Battles</title>
 
-        <!-- Reset CSS -->
-        <link rel="stylesheet" href="./assets/css/reset.css">
+    <!-- Reset CSS -->
+    <link rel="stylesheet" href="./assets/css/reset.css">
 
-        <!-- Bootstrap CSS -->
-        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
 
-        <!-- VT323 font from Google -->
-        <link href="https://fonts.googleapis.com/css?family=VT323&display=swap" rel="stylesheet">
+    <!-- VT323 font from Google -->
+    <link href="https://fonts.googleapis.com/css?family=VT323&display=swap" rel="stylesheet">
 
-        <!-- Local CSS -->
-        <link rel="stylesheet" href="./assets/css/style.css">
-    </head>
-    <body class="w-100 h-100">
-        
-        <!-- jQuery -->
-        <script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+    <!-- Local CSS -->
+    <link rel="stylesheet" href="./assets/css/style.css">
+</head>
 
-        <!-- Bootstrap JS -->
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
-        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
-        
-        <!-- Game JS -->
-        <script src="./assets/javascript/character.js"></script>
-        <script src="./assets/javascript/game.js"></script>
+<body class="w-100 h-100">
 
-        <!-- Main container -->
-        <div class="container text-center my-5" id="main-div">
-            <!-- Header -->
-            <div class="row text-center"><span class="col" id="header">Dungeon RPG Battles</span></div>
-
-            <div class="row text-center"><span class="col" id="instructions"></span></div>
-
-            <!-- Game -->
-            <div class="row mx-auto my-3" id="game-div">
-                <!-- Start game when page has loaded -->
-                <script>
-                    $(document).ready(function() {
-                        const game = new Game();
-
-                        $(".character").on("click", function() {
-                            game.onClick($(this).attr("id"));
-                        });
-                    });
-                </script>
-            </div>
-
-            <div class="row my-2 mx-auto">
-                <div class="col ml-2 p-2 text-left" id="log-div">
-                    <p>Testing text, please ignore!</p>
-                </div>
-            </div>
+    <!-- Main container -->
+    <div class="container text-center my-5" id="main-div">
+        <!-- Header -->
+        <div class="row my-2 text-center">
+            <span class="col mx-3 display-4 text-nowrap overflow-hidden" id="header">Dungeon RPG Battles</span>
         </div>
-    </body>
+
+        <!-- Game -->
+        <div class="row w-98 mx-auto my-2 text-center" id="game-div"></div>
+
+        <div class="row my-2 mx-1 text-center" id="info">
+            <span class="col" id="player-health"></span>
+            <span class="col-5 my-2 text-nowrap overflow-hidden" id="instructions"></span>
+            <span class="col" id="enemy-health"></span>
+        </div>
+
+        <div class="row my-2 mx-auto">
+            <div class="col p-2 text-left pre-scrollable" id="log-div"></div>
+        </div>
+    </div>
+
+    <!-- jQuery -->
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"
+        integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+        integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous">
+    </script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+        integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous">
+    </script>
+
+    <!-- Game JS -->
+    <script src="./assets/javascript/character.js"></script>
+    <script src="./assets/javascript/game.js"></script>
+</body>
+
 </html>

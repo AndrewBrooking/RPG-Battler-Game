@@ -1,35 +1,27 @@
-const IMG_HEIGHT = 196;
-const FRAMES = 2;
-
 class Character {
 
-    constructor(name, health, attack, counter) {
-        this.baseStats = {
-            baseHealth: health,
-            baseAttack: attack
-        };
-
+    constructor(name, baseHealth, baseAttack, counter) {
         this.name = name;
+        this.baseHealth = baseHealth;
+        this.baseAttack = baseAttack;
         this.counter = counter;
-
         this.reset();
     }
 
     createSprite() {
-        let div = $("<div>");
-        div.attr("class", "col mx-auto px-2 character");
-        div.attr("id", this.name);
-        return div;
-    }
+        let outerDiv = $("<div>");
+        outerDiv.attr("class", "col mx-auto text-center outer-div")
 
-    attack(enemy) {
-        enemy.health -= this.attack;
-        this.health -= enemy.counter;
-        this.attack += this.baseStats.baseAttack;
+        let innerDiv = $("<div>");
+        innerDiv.attr("class", "mx-auto character");
+        innerDiv.attr("id", this.name);
+
+        outerDiv.append(innerDiv);
+        return outerDiv;
     }
 
     reset() {
-        this.health = this.baseStats.baseHealth;
-        this.attack = this.baseStats.baseAttack;
+        this.currHealth = this.baseHealth;
+        this.currAttack = this.baseAttack;
     }
 }
