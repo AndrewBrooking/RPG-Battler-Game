@@ -18,7 +18,7 @@ class Game {
     }
 
     enemySelect() {
-        $("#" + this.player.name).addClass("player");
+        $("#" + this.player.name).addClass("border border-success rounded");
         this.setInstructions("Please select an enemy");
     }
 

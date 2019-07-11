@@ -1,5 +1,9 @@
+body {
+    background-image: url("../images/main-bg.svg");
+}
+
 #main-div {
-    border: 1px solid black;
+    border-color: black !important;
     background: #483B3A;
     color: white;
     font-family: 'VT323', monospace;
@@ -47,10 +51,6 @@
     animation: sprite 1s steps(2) infinite;
 }
 
-.player {
-    border: 3px solid darkgreen;
-}
-
 .enemy {
     transform: scaleX(-1);
 }
@@ -70,6 +70,12 @@
 
 .btn:hover {
     color: lightgray;
+}
+
+.btn:focus,.btn:active:focus,.btn.active:focus,
+.btn.focus,.btn:active.focus,.btn.active.focus {
+    outline: none !important;
+    box-shadow: none;
 }
 
 #info {
